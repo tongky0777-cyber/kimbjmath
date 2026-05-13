@@ -889,6 +889,7 @@ footer { background:var(--ink); padding:44px 0; }
     dots.forEach(function(d,i){ d.style.background = i===cur?'#fff':'rgba(255,255,255,.3)'; });
   }
   window.reviewSlide = function(dir){ goTo(cur+dir); };
+  setInterval(function(){ goTo(cur+1 > max ? 0 : cur+1); }, 3000);
 })();
 </script>
 <section id="portfolio" class="sec">
