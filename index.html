@@ -143,13 +143,21 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,249,255,.86);backdr
 .tt-head h3{font-size:20px;font-weight:900;letter-spacing:-.02em;}
 .tt-note{font-size:13px;color:var(--muted);}
 .tt-scroll{overflow-x:auto;}
-.timetable table{width:100%;border-collapse:collapse;min-width:620px;}
+.timetable table{width:100%;border-collapse:collapse;min-width:760px;}
 .timetable th{background:var(--lav-deep);color:#fff;font-size:13.5px;font-weight:700;padding:11px 8px;}
 .timetable th:first-child{border-radius:10px 0 0 0;}
 .timetable th:last-child{border-radius:0 10px 0 0;}
 .timetable td{text-align:center;font-size:13.5px;padding:13px 8px;border-bottom:1px solid var(--line);color:var(--ink-soft);}
-.timetable td.t{font-weight:700;color:var(--ink);background:var(--lav-bg);}
+.timetable td.t{font-weight:700;color:var(--ink);background:var(--lav-bg);white-space:nowrap;font-size:12.5px;}
 .timetable td.rest{background:rgba(244,196,216,.18);color:var(--lav-deep);font-weight:600;}
+/* 시간표 반 색상 */
+.timetable td span{display:block;font-size:11px;font-weight:600;opacity:.75;margin-top:3px;}
+.timetable td.c-lav,.timetable td.c-blue,.timetable td.c-green,.timetable td.c-gold,.timetable td.c-gray{font-weight:700;font-size:13px;border-radius:8px;}
+.timetable td.c-lav{background:var(--lav-soft);color:var(--lav-deep);}
+.timetable td.c-blue{background:#e6effb;color:#3567a8;}
+.timetable td.c-green{background:#e7f3ec;color:#2f8a63;}
+.timetable td.c-gold{background:#fbf2dd;color:#b8860f;}
+.timetable td.c-gray{background:#eeecf2;color:#6b6580;}
 @media(max-width:880px){
   .course-grid{grid-template-columns:1fr 1fr;}
 }
@@ -337,16 +345,50 @@ footer{background:var(--ink);color:#fff;padding:54px 0;text-align:center;}
     <div class="timetable">
       <div class="tt-head">
         <h3>주간 시간표</h3>
-        <span class="tt-note">※ 개별 수업은 별도 상담</span>
+        <span class="tt-note">※ 개별 상담 후 반 배정</span>
       </div>
       <div class="tt-scroll">
         <table>
-          <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr></thead>
+          <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th><th>일</th></tr></thead>
           <tbody>
-            <tr><td class="t">오후</td><td>공수1 문제</td><td></td><td>공수1 문제</td><td></td><td></td><td class="rest">개별 수업</td></tr>
-            <tr><td class="t">저녁</td><td>대수 문제</td><td>공수2 문제</td><td>대수 문제</td><td>공수2 문제</td><td></td><td class="rest">개별 수업</td></tr>
-            <tr><td class="t">9~11시</td><td>공수1 심화</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td class="t">11~13시</td><td>공수2 심화</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr>
+              <td class="t">09:00~11:00</td>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td class="c-lav">개별반</td>
+              <td class="c-gray">개별반</td>
+            </tr>
+            <tr>
+              <td class="t">11:00~13:00</td>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td class="c-blue">공수1 심화반<span>중3</span></td>
+              <td class="c-green">공통수학2 심화반<span>고1</span></td>
+            </tr>
+            <tr>
+              <td class="t">14:30~16:20</td>
+              <td></td><td class="c-blue">공수1 문풀반<span>초6</span></td><td></td><td></td><td class="c-blue">공수1 문풀반<span>초6</span></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="t">16:20~18:10</td>
+              <td></td><td class="c-blue">공수2 개념반<span>중2</span></td><td></td><td></td><td class="c-blue">공수2 개념반<span>중2</span></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="t">18:10~20:00</td>
+              <td class="c-green">미적분1 개념반<span>중2</span></td>
+              <td class="c-gold">대수 문풀반<span>중2</span></td>
+              <td></td>
+              <td class="c-green">미적분1 개념반<span>중2</span></td>
+              <td class="c-gold">대수 문풀반<span>중2</span></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td class="t">20:00~22:00</td>
+              <td class="c-green">고등 내신대비반<span>고1·2</span></td>
+              <td class="c-blue">공수1 심화반<span>고1</span></td>
+              <td></td>
+              <td class="c-green">고등 내신대비반<span>고1·2</span></td>
+              <td class="c-blue">공수1 심화반<span>고1</span></td>
+              <td></td><td></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -425,19 +467,19 @@ footer{background:var(--ink);color:#fff;padding:54px 0;text-align:center;}
         <div class="cic" style="background:var(--lav-soft);">📞</div>
         <h3>전화 상담</h3>
         <p class="cdesc">상담 가능 시간<br><b>매일 오전 9시 ~ 새벽 1시</b></p>
-        <a href="tel:01000000000" class="btn btn-primary" style="width:100%;justify-content:center;">📞 전화 바로 걸기</a>
+        <a href="tel:01064865966" class="btn btn-primary" style="width:100%;justify-content:center;">📞 전화 바로 걸기</a>
       </div>
       <div class="contact-card">
         <div class="cic" style="background:rgba(244,196,216,.4);">💬</div>
         <h3>카카오톡 문의</h3>
         <p class="cdesc">메시지를 남겨주시면<br><b>순서대로 답변 드립니다</b></p>
-        <a href="#" class="btn btn-ghost kakao" style="width:100%;justify-content:center;">💬 카카오톡 바로 가기</a>
+        <a href="https://open.kakao.com/o/snnxXTwg" target="_blank" rel="noopener" class="btn btn-ghost kakao" style="width:100%;justify-content:center;">💬 카카오톡 바로 가기</a>
       </div>
       <div class="contact-card">
         <div class="cic" style="background:#e8f3ee;">📝</div>
         <h3>블로그</h3>
         <p class="cdesc">수업 후기와 분석 자료를<br><b>블로그에서 만나보세요</b></p>
-        <a href="#" class="btn btn-ghost" style="width:100%;justify-content:center;">📝 블로그 보러가기</a>
+        <a href="https://blog.naver.com/tongky0777" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%;justify-content:center;">📝 블로그 보러가기</a>
       </div>
     </div>
   </div>
