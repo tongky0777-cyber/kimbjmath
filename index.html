@@ -202,6 +202,8 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,249,255,.86);backdr
 .portal-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
 .portal-list li{display:flex;align-items:center;gap:11px;font-size:15.5px;color:#ddd8ec;}
 .portal-list li span{width:24px;height:24px;border-radius:50%;background:var(--lav-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.sys-tags{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px;}
+.sys-tag{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:11px 18px;font-size:14px;font-weight:500;color:#e6e1f2;}
 /* footer */
 footer{background:var(--ink);color:#fff;padding:54px 0;text-align:center;}
 .foot-brand{display:inline-flex;align-items:center;gap:10px;font-weight:900;font-size:19px;margin-bottom:12px;}
@@ -407,7 +409,7 @@ footer{background:var(--ink);color:#fff;padding:54px 0;text-align:center;}
     <div class="review-grid">
       <div class="review-card"><div class="stars">★★★★★</div><p>"개념의 응용까지 심화된 응용까지 배울 수 있고, 자료가 많아 부족한 부분을 채울 수 있었다."</p><span class="rv">학생 · 2026년</span></div>
       <div class="review-card"><div class="stars">★★★★★</div><p>"선생님의 only one 교재가 미적분을 입체적으로 보이게 만들어 주었고, 알려주신 스킬을 배우면서 실제 시험에서 다른 학생들보다 자유롭게 시간을 컨트롤할 수 있었습니다. 이번 수학 시험에서 영륜고 전교 1등을 받았습니다."</p><span class="rv">학생 · 2026년</span></div>
-      <div class="review-card"><div class="stars">★★★★★</div><p>"1등급들이 아는 공식들을 많이 알게 되었고, 그래서 가산고에서 1등급을 받을 수 있게 되었다."</p><span class="rv">학생 · 2026년</span></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p>"1등급들이 아는 공식들을 많이 알게 되었고, 그래서 대륜고에서 1등급을 받을 수 있게 되었다."</p><span class="rv">학생 · 2026년</span></div>
       <div class="review-card"><div class="stars">★★★★★</div><p>"원래 수학을 자신없어 하는 스포츠 학생이었으나 김병진 선생님의 수업을 듣고 수학에 자신감을 느끼게 되고 주변에서 수학을 잘한다는 소리를 듣게 되었습니다. 이 수업을 적극 추천드립니다."</p><span class="rv">학생 · 2026년</span></div>
       <div class="review-card"><div class="stars">★★★★★</div><p>"단순히 계산식으로 문제를 푸는 것보다 그래프를 통해 시각적으로 문제를 이해하는 것이 쉬웠습니다. 공식을 외우는 것 이상으로 이해시켜 주셔서 직접 공식을 유도해 문제를 풀 수 있게 되었습니다."</p><span class="rv">학생 · 2026년</span></div>
       <div class="review-card"><div class="stars">★★★★★</div><p>"여러 유형의 변형 문제까지 다뤄볼 수 있었고, 또한 이해하기 어려운 문제도 풀 수 있게 되었다."</p><span class="rv">학생 · 2026년</span></div>
@@ -485,23 +487,23 @@ footer{background:var(--ink);color:#fff;padding:54px 0;text-align:center;}
   </div>
 </section>
 
-<!-- ===== 학생 포털 ===== -->
+<!-- ===== 관리 시스템 ===== -->
 <section class="sec" style="background:linear-gradient(135deg,#3a2f5c,#2b2540);color:#fff;">
   <div class="wrap portal-grid">
     <div>
-      <div class="eyebrow" style="color:var(--lav);">Student Portal</div>
-      <h2 class="sec-title" style="color:#fff;">내 성적 · 출결 보기</h2>
-      <p style="font-size:16px;color:#c9c2dd;margin-bottom:28px;max-width:440px;">수업 출결 현황, 테스트 점수, 숙제 제출 여부를 실시간으로 확인하실 수 있습니다.</p>
+      <div class="eyebrow" style="color:var(--lav);">System</div>
+      <h2 class="sec-title" style="color:#fff;">대시보드와 클래스룸으로<br>빈틈없는 관리</h2>
+      <p style="font-size:16px;color:#c9c2dd;margin-bottom:28px;max-width:460px;">출결·성적·진도·숙제까지, 자체 개발한 관리 시스템으로 학생 한 명 한 명을 꼼꼼하게 챙깁니다.</p>
       <ul class="portal-list">
-        <li><span>✓</span> 출결 기록 실시간 확인</li>
-        <li><span>✓</span> 테스트 점수 및 강사 피드백</li>
-        <li><span>✓</span> 현재 진도 및 숙제 현황</li>
+        <li><span>✓</span> 출결 기록 실시간 관리</li>
+        <li><span>✓</span> 테스트 점수 추적 및 강사 피드백</li>
+        <li><span>✓</span> 현재 진도 및 숙제 현황 체계 관리</li>
       </ul>
-      <div style="display:flex;flex-wrap:wrap;gap:13px;margin-top:30px;">
-        <a href="https://kimbjmath.vercel.app/" class="btn btn-primary">📊 대시보드 →</a>
-        <a href="https://kimbjmath.vercel.app/classroom/" class="btn" style="background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.25);">🎓 클래스룸 →</a>
+      <div class="sys-tags">
+        <span class="sys-tag">📊 대시보드</span>
+        <span class="sys-tag">🎓 클래스룸</span>
       </div>
-      <p style="font-size:13px;color:#9a93b5;margin-top:18px;">※ 처음 이용 시 강사에게 포털 링크를 받아주세요.</p>
+      <p style="font-size:13px;color:#9a93b5;margin-top:18px;">※ 재원생은 강사에게 접속 링크를 받아 이용하실 수 있습니다.</p>
     </div>
     <div class="portal-art">
       <div class="glow" style="position:absolute;width:90%;height:90%;border-radius:50%;background:radial-gradient(circle,rgba(184,164,224,.32),transparent 65%);"></div>
