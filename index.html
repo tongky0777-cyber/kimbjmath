@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>김병진 수학연구소 | 고등부 전문 수학 강사</title>
-<meta name="description" content="막히는 순간이 성장하는 순간입니다 · 고등부 전문 수학 · 포커스 수학연구팀">
+<title>김병진 수학연구소 | 고등부 전문 수학</title>
+<meta name="description" content="암기가 아니라, 그래서 푸는 힘 · 고등부 전문 20년 · 자체 교재 7종, 문항별 해설카드 1,200장, 학교별 기출 분석">
 <meta property="og:type" content="website">
 <meta property="og:title" content="김병진 수학연구소">
-<meta property="og:description" content="막히는 순간이 성장하는 순간입니다 · 고등부 전문 수학">
+<meta property="og:description" content="암기가 아니라, 그래서 푸는 힘 · 고등부 전문 20년">
 <meta property="og:image" content="https://kimbjmath.vercel.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -17,518 +17,590 @@
 <meta name="twitter:image" content="https://kimbjmath.vercel.app/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --ink:#2b2540;
-  --ink-soft:#5a5470;
-  --muted:#8a85a0;
-  --lav:#b8a4e0;
-  --lav-deep:#8b6fc4;
-  --lav-soft:#efe9fb;
-  --lav-bg:#f6f2fd;
-  --pink:#f4c4d8;
-  --gold:#e8b94a;
-  --cream:#fbf9ff;
-  --white:#ffffff;
-  --line:#ece6f6;
-  --sans:'Noto Sans KR',sans-serif;
-  --hand:'Gaegu',cursive;
+  --ink:#111820;
+  --ink-2:#19222C;
+  --ink-3:#23303C;
+  --paper:#F6F4EF;
+  --white:#FFFFFF;
+  --line:#E3DED3;
+  --line-d:#2C3844;
+  --brass:#B08D57;
+  --teal:#0E7A63;
+  --teal-d:#0A5B4A;
+  --body:#4A5560;
+  --mute:#6B7580;
+  --mute-d:#9AA6B1;
+  --mute-dd:#7E8B96;
+  --pale:#C2CCD4;
+  --sans:'Gothic A1','Noto Sans KR',Dotum,'돋움',AppleSDGothicNeo-Regular,sans-serif;
 }
-html{scroll-behavior:smooth;font-size:16px;}
-body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.7;overflow-x:hidden;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;word-break:keep-all;}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+button{font-family:inherit;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
 .sec{padding:96px 0;}
-.eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;color:var(--lav-deep);text-transform:uppercase;margin-bottom:14px;}
-.sec-title{font-size:clamp(26px,4vw,40px);font-weight:900;letter-spacing:-.02em;line-height:1.25;margin-bottom:18px;}
-.sec-sub{font-size:16px;color:var(--ink-soft);max-width:620px;}
+.sec.alt{background:var(--white);}
+.sec.dark{background:var(--ink);color:var(--paper);}
+.rule{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.rule i{display:block;width:40px;height:1px;background:var(--brass);}
+.eyebrow{font-size:12.5px;letter-spacing:.2em;color:var(--brass);font-weight:800;}
+.h2{font-size:clamp(28px,4.2vw,42px);font-weight:800;letter-spacing:-.025em;line-height:1.34;}
+.lead{font-size:15.5px;line-height:1.95;color:var(--body);max-width:440px;}
+.dark .lead{color:var(--mute-d);}
+.sechead{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;margin-bottom:44px;flex-wrap:wrap;}
+.teal{color:var(--teal);}
+.brass{color:var(--brass);}
 
-/* ===== 헤더 ===== */
-header{position:sticky;top:0;z-index:100;background:rgba(251,249,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px;}
-.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:18px;letter-spacing:-.02em;}
-.logo .mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--lav),var(--lav-deep));display:flex;align-items:center;justify-content:center;color:#fff;font-size:19px;box-shadow:0 4px 14px rgba(139,111,196,.32);}
+/* 헤더 */
+header{position:sticky;top:0;z-index:100;background:rgba(17,24,32,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--ink-3);}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.mark{width:38px;height:38px;border:1.5px solid var(--brass);display:flex;align-items:center;justify-content:center;
+  font-size:19px;font-weight:800;color:var(--brass);flex-shrink:0;}
+.brand-t{display:flex;flex-direction:column;gap:1px;}
+.brand-t b{font-size:17px;font-weight:800;color:var(--paper);letter-spacing:-.01em;line-height:1.3;}
+.brand-t span{font-size:10.5px;letter-spacing:.18em;color:var(--mute-dd);}
 .nav-links{display:flex;align-items:center;gap:30px;}
-.nav-links a{font-size:14.5px;font-weight:500;color:var(--ink-soft);transition:color .2s;}
-.nav-links a:hover{color:var(--lav-deep);}
-.nav-cta{background:linear-gradient(135deg,var(--lav-deep),#7559b5);color:#fff!important;padding:10px 20px;border-radius:999px;font-weight:700!important;font-size:14px!important;box-shadow:0 6px 18px rgba(139,111,196,.32);transition:transform .2s,box-shadow .2s;}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(139,111,196,.42);}
-.menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--pale);transition:color .18s;}
+.nav-links a:hover{color:var(--brass);}
+.nav-cta{font-size:14px!important;font-weight:800!important;color:var(--ink)!important;background:var(--brass);padding:11px 22px;transition:opacity .18s;}
+.nav-cta:hover{opacity:.86;}
+.menu-btn{display:none;width:44px;height:44px;background:none;border:none;color:var(--paper);cursor:pointer;align-items:center;justify-content:center;}
+.drawer{display:none;border-top:1px solid var(--ink-3);padding:10px 0 18px;}
+.drawer.on{display:block;}
+.drawer a{display:block;padding:13px 28px;font-size:15px;color:var(--pale);}
 
-/* ===== 히어로 ===== */
-.hero{position:relative;padding:70px 0 90px;overflow:hidden;}
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(circle at 78% 18%,rgba(184,164,224,.30),transparent 45%),
-  radial-gradient(circle at 12% 75%,rgba(244,196,216,.28),transparent 42%);
-  z-index:0;}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
-.hero h1{font-size:clamp(34px,5.5vw,58px);font-weight:900;line-height:1.18;letter-spacing:-.03em;margin-bottom:22px;}
-.hero h1 .hl{color:var(--lav-deep);position:relative;white-space:nowrap;}
-.hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:13px;background:rgba(232,185,74,.35);z-index:-1;border-radius:4px;}
-.hero p.lead{font-size:18px;color:var(--ink-soft);margin-bottom:34px;max-width:480px;}
-.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px;}
-.tag{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:13.5px;font-weight:500;color:var(--ink-soft);box-shadow:0 2px 8px rgba(43,37,64,.04);}
-.tag b{color:var(--lav-deep);font-weight:700;}
-.hero-btns{display:flex;flex-wrap:wrap;gap:13px;}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none;}
-.btn-primary{background:linear-gradient(135deg,var(--lav-deep),#7559b5);color:#fff;box-shadow:0 8px 22px rgba(139,111,196,.34);}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(139,111,196,.44);}
-.btn-ghost{background:var(--white);color:var(--ink);border:1.5px solid var(--line);}
-.btn-ghost:hover{transform:translateY(-2px);border-color:var(--lav);box-shadow:0 8px 20px rgba(43,37,64,.07);}
-.hero-art{position:relative;display:flex;justify-content:center;align-items:center;}
-.hero-art .glow{position:absolute;width:106%;height:106%;border-radius:50%;background:radial-gradient(circle,rgba(184,164,224,.34),transparent 62%);z-index:0;}
-.hero-art img{position:relative;z-index:1;width:100%;max-width:430px;filter:drop-shadow(0 26px 50px rgba(139,111,196,.28));border-radius:28px;}
-.float-badge{position:absolute;z-index:2;background:var(--white);border-radius:16px;padding:13px 17px;box-shadow:0 12px 34px rgba(43,37,64,.13);display:flex;align-items:center;gap:11px;border:1px solid var(--line);}
-.float-badge .ic{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
-.float-badge .t1{font-size:12px;color:var(--muted);font-weight:500;line-height:1.3;}
-.float-badge .t2{font-size:16px;font-weight:900;color:var(--ink);line-height:1.2;}
-.fb-1{top:8%;left:-22px;animation:floaty 4.5s ease-in-out infinite;}
-.fb-2{bottom:10%;right:-18px;animation:floaty 5.2s ease-in-out infinite .8s;}
-@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+/* 히어로 */
+.hero{background:var(--ink);color:var(--paper);padding:104px 0 0;}
+.hero-grid{display:flex;gap:64px;align-items:center;}
+.hero-l{flex:1 1 560px;min-width:0;}
+.hero h1{font-size:clamp(38px,5.6vw,62px);font-weight:800;line-height:1.24;letter-spacing:-.03em;margin-bottom:6px;}
+.hero h1.b{color:var(--brass);margin-bottom:30px;}
+.hero p{font-size:17px;line-height:1.85;color:#AFBAC4;max-width:530px;margin-bottom:38px;}
+.hero p b{color:var(--paper);font-weight:800;}
+.btns{display:flex;gap:11px;flex-wrap:wrap;}
+.btn{display:inline-block;font-size:15px;font-weight:800;padding:17px 32px;transition:opacity .18s;}
+.btn-l{background:var(--paper);color:var(--ink);}
+.btn-o{border:1px solid #3C4A56;color:var(--paper);font-weight:500;padding:16px 30px;}
+.btn:hover{opacity:.86;}
+.hero-r{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:13px;}
+.card-d{background:var(--ink-2);border-left:2px solid var(--teal);padding:24px 26px;}
+.card-d .k{font-size:11.5px;letter-spacing:.16em;color:var(--mute-dd);font-weight:800;margin-bottom:7px;}
+.card-d .t{font-size:24px;font-weight:800;color:var(--paper);margin-bottom:6px;letter-spacing:-.01em;}
+.card-d .d{font-size:13.5px;line-height:1.7;color:var(--mute-d);}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink-3);margin-top:72px;}
+.stat{padding:30px 0 34px;}
+.stat+.stat{border-left:1px solid var(--ink-3);padding-left:42px;}
+.stat .n{font-size:clamp(26px,3.2vw,34px);font-weight:800;color:var(--paper);letter-spacing:-.02em;}
+.stat .n small{font-size:18px;color:var(--brass);font-weight:800;}
+.stat .l{font-size:13px;color:var(--mute-dd);margin-top:4px;}
 
-.mobile-nav{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--line);}
-.mobile-nav.open{display:flex;}
-.mobile-nav a{padding:14px 24px;font-size:15px;font-weight:500;border-top:1px solid var(--line);color:var(--ink-soft);}
-@media(max-width:880px){
+/* 카드 공통 */
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.card{background:var(--white);border:1px solid var(--line);padding:30px 32px;}
+.sec.alt .card{background:var(--paper);}
+.card h3{font-size:21px;font-weight:800;letter-spacing:-.015em;margin-bottom:9px;}
+.card p{font-size:14.5px;line-height:1.85;color:var(--body);}
+.quote{background:var(--paper);border-left:2px solid var(--teal);padding:14px 17px;font-size:13.5px;line-height:1.78;color:var(--body);margin-top:16px;}
+.sec.alt .quote{background:var(--white);}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;}
+.tag{font-size:12.5px;background:var(--paper);border:1px solid var(--line);padding:6px 12px;}
+.sec.alt .tag{background:var(--white);}
+.big{font-size:30px;font-weight:800;color:var(--teal);letter-spacing:-.02em;}
+.big small{font-size:15px;color:var(--body);font-weight:500;}
+.rowhead{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:6px;}
+
+/* 소개 */
+.about{display:flex;gap:36px;align-items:stretch;}
+.profile{flex:0 0 340px;background:var(--ink);color:var(--paper);padding:38px 34px;display:flex;flex-direction:column;justify-content:space-between;gap:34px;}
+.profile .mk{width:84px;height:84px;border:1.5px solid var(--brass);display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;color:var(--brass);margin-bottom:20px;}
+.profile .nm{font-size:30px;font-weight:800;letter-spacing:-.02em;}
+.profile .sub{font-size:14px;color:var(--mute-d);line-height:1.8;margin-top:7px;}
+.facts{border-top:1px solid var(--ink-3);padding-top:16px;display:flex;flex-direction:column;gap:11px;}
+.fact{display:flex;gap:14px;align-items:baseline;}
+.fact b{font-size:12px;color:var(--brass);font-weight:800;width:44px;flex-shrink:0;}
+.fact span{font-size:13.5px;color:var(--pale);}
+.steps{flex:1 1 auto;display:flex;flex-direction:column;gap:16px;min-width:0;}
+.step{background:var(--white);border:1px solid var(--line);padding:28px 32px;display:flex;gap:24px;}
+.step .no{font-size:15px;font-weight:800;color:var(--brass);padding-top:3px;flex-shrink:0;}
+.step h3{font-size:20px;font-weight:800;margin-bottom:7px;letter-spacing:-.015em;}
+.step p{font-size:14.5px;line-height:1.85;color:var(--body);}
+.band{background:var(--teal);color:#fff;padding:24px 32px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.band p{flex:1 1 320px;font-size:15.5px;line-height:1.8;}
+.band a{background:#fff;color:var(--teal);font-size:14px;font-weight:800;padding:13px 24px;white-space:nowrap;}
+
+/* 앞으로 */
+.next{background:var(--ink);color:var(--paper);padding:38px 44px;display:flex;gap:44px;align-items:center;flex-wrap:wrap;margin-top:20px;}
+.next-h{flex:0 0 260px;}
+.next-h h3{font-size:26px;font-weight:800;line-height:1.4;letter-spacing:-.02em;margin-top:10px;}
+.next-l{flex:1 1 420px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 32px;}
+.nx{display:flex;gap:12px;align-items:flex-start;}
+.nx i{width:6px;height:6px;background:var(--brass);margin-top:8px;flex-shrink:0;}
+.nx div{font-size:14px;line-height:1.7;color:var(--pale);}
+.nx b{display:block;color:var(--paper);font-weight:800;}
+
+/* 과정 */
+.courses{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+.co{background:var(--white);border:1px solid var(--line);padding:22px 22px 24px;}
+.co .cat{font-size:11px;letter-spacing:.1em;color:var(--brass);font-weight:800;}
+.co h3{font-size:18px;font-weight:800;margin:7px 0 6px;letter-spacing:-.015em;}
+.co p{font-size:13px;line-height:1.7;color:var(--mute);}
+/* 손풀이 갤러리 */
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+.ga{display:block;background:var(--white);border:1px solid var(--line);padding:10px 10px 0;transition:border-color .18s,transform .18s;}
+.ga:hover{border-color:var(--teal);transform:translateY(-3px);}
+.ga img{width:100%;height:290px;object-fit:cover;object-position:top center;border:1px solid var(--line);}
+.ga .cap{padding:13px 4px 15px;}
+.ga .cap b{display:block;font-size:14.5px;font-weight:800;letter-spacing:-.015em;}
+.ga .cap span{display:block;font-size:12.5px;color:var(--mute);margin-top:3px;}
+.note{background:var(--ink);color:var(--paper);padding:26px 32px;margin-top:20px;display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+.note p{flex:1 1 420px;font-size:15px;line-height:1.85;color:var(--pale);}
+.note p b{color:var(--paper);font-weight:800;}
+.cal{background:var(--teal);color:#fff;padding:32px 36px;display:flex;align-items:center;gap:30px;flex-wrap:wrap;margin-top:18px;}
+.cal .t{flex:1 1 380px;}
+.cal h3{font-size:25px;font-weight:800;letter-spacing:-.02em;margin:9px 0 9px;}
+.cal p{font-size:14.5px;line-height:1.8;opacity:.94;}
+.cal .eyebrow{color:#DCEFE9;}
+.cal a{background:#fff;color:var(--teal);font-size:14.5px;font-weight:800;padding:15px 28px;white-space:nowrap;}
+
+/* 시스템 */
+.flow{display:flex;align-items:stretch;flex-wrap:wrap;margin-top:20px;background:var(--ink);color:var(--paper);padding:34px 40px;gap:30px;}
+.flow-h{flex:0 0 280px;}
+.flow-h h3{font-size:25px;font-weight:800;line-height:1.45;letter-spacing:-.02em;margin-top:10px;}
+.flow-s{flex:1 1 440px;display:flex;flex-wrap:wrap;}
+.fs{flex:1 1 130px;padding:0 22px;}
+.fs+.fs{border-left:1px solid var(--ink-3);}
+.fs b{display:block;font-size:16px;font-weight:800;color:var(--brass);margin-bottom:7px;}
+.fs span{font-size:13.5px;line-height:1.7;color:var(--mute-d);}
+.ico{width:40px;height:40px;border:1.5px solid var(--teal);display:flex;align-items:center;justify-content:center;margin-bottom:15px;}
+.ul{display:flex;flex-direction:column;gap:8px;margin-top:4px;}
+.ul div{font-size:14px;line-height:1.6;color:var(--body);}
+
+/* 분석서 */
+.rp{border:1px solid var(--line);background:var(--white);padding:26px 28px;display:block;transition:border-color .18s;}
+.rp:hover{border-color:var(--teal);}
+.sec.alt .rp{background:var(--paper);}
+.rp .chips{display:flex;align-items:center;gap:8px;margin-bottom:13px;flex-wrap:wrap;}
+.chip-k{font-size:11.5px;font-weight:800;color:#fff;background:var(--ink);padding:4px 10px;}
+.chip-s{font-size:11.5px;font-weight:800;color:var(--teal);border:1px solid var(--teal);padding:3px 9px;}
+.rp .dt{font-size:12.5px;color:var(--mute);}
+.rp h3{font-size:20px;font-weight:800;margin:4px 0 9px;letter-spacing:-.015em;}
+.rp p{font-size:13.5px;line-height:1.75;color:var(--body);margin-bottom:12px;}
+.rp .go{font-size:13.5px;font-weight:800;color:var(--teal);}
+
+/* 후기 */
+.rv-hero{background:var(--ink-2);border-left:3px solid var(--brass);padding:32px 38px;display:flex;gap:36px;align-items:center;flex-wrap:wrap;margin-bottom:18px;}
+.rv-hero p{flex:1 1 440px;font-size:21px;line-height:1.72;color:var(--paper);font-weight:500;letter-spacing:-.01em;}
+.rv-hero .who{font-size:13.5px;color:var(--mute-d);margin-top:12px;}
+.rv-hero .badge{flex:0 0 190px;border-left:1px solid var(--line-d);padding-left:32px;}
+.rv-hero .badge b{display:block;font-size:29px;font-weight:800;color:var(--brass);letter-spacing:-.02em;}
+.rv-hero .badge span{font-size:13.5px;line-height:1.7;color:var(--pale);}
+.rv{background:var(--ink-2);padding:24px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;}
+.rv p{font-size:14.5px;line-height:1.85;color:var(--pale);}
+.rv .who{font-size:12.5px;color:var(--mute-dd);}
+
+/* 문의 */
+.ct{padding:32px 30px;display:flex;flex-direction:column;justify-content:space-between;gap:26px;min-height:270px;}
+.ct.dark{background:var(--ink);color:var(--paper);}
+.ct.lite{background:var(--white);border:1px solid var(--line);}
+.ct h3{font-size:22px;font-weight:800;margin:14px 0 7px;letter-spacing:-.015em;}
+.ct .d{font-size:14px;line-height:1.75;}
+.ct.dark .d{color:var(--mute-d);}
+.ct.lite .d{color:var(--body);}
+.ct .tel{font-size:23px;font-weight:800;color:var(--brass);letter-spacing:.01em;margin-bottom:10px;}
+.ct .go{font-size:13.5px;font-weight:800;}
+.ct.dark .go{color:var(--paper);}
+.ct.lite .go{color:var(--teal);}
+
+/* 푸터 */
+footer{background:var(--ink);color:var(--paper);padding:32px 0;}
+.ft{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.ft-l{display:flex;align-items:center;gap:12px;}
+.ft-l .mark{width:34px;height:34px;font-size:17px;}
+.ft-l b{font-size:15px;font-weight:800;}
+.ft-l span{display:block;font-size:12px;color:var(--mute-dd);}
+.ft-n{display:flex;gap:26px;flex-wrap:wrap;}
+.ft-n a{font-size:13.5px;color:var(--mute-d);}
+.ft-n a:hover{color:var(--brass);}
+.ft-c{font-size:12px;color:#5D6975;}
+
+@media(max-width:980px){
+  .sec{padding:72px 0;}
+  .hero{padding:72px 0 0;}
+  .hero-grid{flex-direction:column;gap:40px;align-items:stretch;}
+  .about{flex-direction:column;}
+  .profile{flex:1 1 auto;}
+  .courses{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:56px;}
+  .stat+.stat{border-left:none;padding-left:0;}
+  .stat:nth-child(2n){border-left:1px solid var(--ink-3);padding-left:32px;}
+  .stat:nth-child(n+3){border-top:1px solid var(--ink-3);}
+}
+@media(max-width:680px){
+  .wrap{padding:0 20px;}
+  .sec{padding:60px 0;}
   .nav-links{display:none;}
-  .menu-btn{display:block;}
-  .hero-grid{grid-template-columns:1fr;gap:36px;}
-  .hero-art{order:-1;}
-  .hero-art img{max-width:300px;}
-  .sec{padding:64px 0;}
-}
-/* about */
-.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center;}
-.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.stat-card{background:var(--lav-bg);border:1px solid var(--line);border-radius:18px;padding:26px 22px;text-align:center;transition:transform .25s,box-shadow .25s;}
-.stat-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(139,111,196,.16);}
-.stat-card.accent{background:linear-gradient(135deg,var(--lav-deep),#7559b5);border-color:transparent;}
-.stat-card.accent .stat-num,.stat-card.accent .stat-label{color:#fff;}
-.stat-num{font-size:38px;font-weight:900;color:var(--lav-deep);letter-spacing:-.03em;line-height:1;}
-.stat-num span{font-size:17px;font-weight:700;}
-.stat-label{font-size:13.5px;color:var(--ink-soft);margin-top:8px;font-weight:500;}
-/* card grid */
-.card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.feature-card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:30px 24px;transition:transform .25s,box-shadow .25s;}
-.feature-card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(43,37,64,.10);}
-.feature-card .fic{width:56px;height:56px;border-radius:16px;background:var(--lav-soft);display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:18px;}
-.feature-card h3{font-size:18px;font-weight:900;margin-bottom:10px;letter-spacing:-.02em;}
-.feature-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.65;}
-@media(max-width:880px){
-  .about-grid{grid-template-columns:1fr;gap:34px;}
-  .card-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:560px){
-  .card-grid{grid-template-columns:1fr;}
-  .about-stats{grid-template-columns:1fr 1fr;}
-}
-/* course */
-.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:56px;}
-.course-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:22px 20px;transition:transform .22s,box-shadow .22s,border-color .22s;}
-.course-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(43,37,64,.09);border-color:var(--lav);}
-.course-card.focus{background:linear-gradient(135deg,var(--lav-bg),#f0e9fc);border-color:var(--lav);}
-.badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:12px;letter-spacing:.02em;}
-.badge.common{background:var(--lav-soft);color:var(--lav-deep);}
-.badge.general{background:#e8f3ee;color:#2f8a63;}
-.badge.career{background:#fdf2e0;color:#c9921f;}
-.badge.focusb{background:var(--lav-deep);color:#fff;}
-.course-card h3{font-size:17.5px;font-weight:900;margin-bottom:8px;letter-spacing:-.02em;}
-.course-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.6;}
-/* timetable */
-.timetable{background:var(--cream);border:1px solid var(--line);border-radius:22px;padding:30px 30px 14px;}
-.tt-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:18px;}
-.tt-head h3{font-size:20px;font-weight:900;letter-spacing:-.02em;}
-.tt-note{font-size:13px;color:var(--muted);}
-.tt-scroll{overflow-x:auto;}
-.timetable table{width:100%;border-collapse:collapse;min-width:760px;}
-.timetable th{background:var(--lav-deep);color:#fff;font-size:13.5px;font-weight:700;padding:11px 8px;}
-.timetable th:first-child{border-radius:10px 0 0 0;}
-.timetable th:last-child{border-radius:0 10px 0 0;}
-.timetable td{text-align:center;font-size:13.5px;padding:13px 8px;border-bottom:1px solid var(--line);color:var(--ink-soft);}
-.timetable td.t{font-weight:700;color:var(--ink);background:var(--lav-bg);white-space:nowrap;font-size:12.5px;}
-.timetable td.rest{background:rgba(244,196,216,.18);color:var(--lav-deep);font-weight:600;}
-/* 시간표 반 색상 */
-.timetable td span{display:block;font-size:11px;font-weight:600;opacity:.75;margin-top:3px;}
-.timetable td.c-lav,.timetable td.c-blue,.timetable td.c-green,.timetable td.c-gold,.timetable td.c-gray{font-weight:700;font-size:13px;border-radius:8px;}
-.timetable td.c-lav{background:var(--lav-soft);color:var(--lav-deep);}
-.timetable td.c-blue{background:#e6effb;color:#3567a8;}
-.timetable td.c-green{background:#e7f3ec;color:#2f8a63;}
-.timetable td.c-gold{background:#fbf2dd;color:#b8860f;}
-.timetable td.c-gray{background:#eeecf2;color:#6b6580;}
-@media(max-width:880px){
-  .course-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:560px){
-  .course-grid{grid-template-columns:1fr;}
-  .timetable{padding:22px 18px 10px;}
-}
-/* reviews */
-.review-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-.review-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s;}
-.review-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(43,37,64,.10);}
-.review-card .stars{color:var(--gold);font-size:15px;letter-spacing:2px;margin-bottom:12px;}
-.review-card p{font-size:14px;color:var(--ink-soft);line-height:1.7;flex:1;}
-.review-card .rv{font-size:12.5px;color:var(--muted);font-weight:600;margin-top:16px;}
-@media(max-width:980px){.review-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.review-grid{grid-template-columns:1fr;}}
-/* reports */
-.report-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
-.report-card{background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:28px 28px;display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s,border-color .22s;position:relative;overflow:hidden;}
-.report-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--lav),var(--lav-deep));}
-.report-card:hover{transform:translateY(-6px);box-shadow:0 20px 42px rgba(139,111,196,.18);border-color:var(--lav);}
-.rc-top{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
-.rc-school{font-size:14px;font-weight:700;color:var(--lav-deep);}
-.rc-tag{font-size:11.5px;font-weight:700;background:var(--lav-soft);color:var(--lav-deep);padding:3px 10px;border-radius:999px;}
-.report-card h3{font-size:19px;font-weight:900;line-height:1.4;letter-spacing:-.02em;margin-bottom:12px;}
-.report-card p{font-size:14px;color:var(--ink-soft);line-height:1.65;flex:1;margin-bottom:18px;}
-.rc-link{font-size:14px;font-weight:700;color:var(--lav-deep);}
-@media(max-width:740px){.report-grid{grid-template-columns:1fr;}}
-/* contact */
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.contact-card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:32px 28px;text-align:center;transition:transform .22s,box-shadow .22s;}
-.contact-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(43,37,64,.10);}
-.contact-card .cic{width:60px;height:60px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 18px;}
-.contact-card h3{font-size:19px;font-weight:900;margin-bottom:10px;}
-.contact-card .cdesc{font-size:14px;color:var(--ink-soft);line-height:1.6;margin-bottom:22px;}
-.contact-card .cdesc b{color:var(--ink);}
-.btn.kakao{background:#fee500;border-color:#fee500;color:#3a2f00;}
-.btn.kakao:hover{border-color:#f3d800;}
-/* portal */
-.portal-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
-.portal-art{position:relative;display:flex;justify-content:center;align-items:center;}
-.portal-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
-.portal-list li{display:flex;align-items:center;gap:11px;font-size:15.5px;color:#ddd8ec;}
-.portal-list li span{width:24px;height:24px;border-radius:50%;background:var(--lav-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
-.sys-tags{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px;}
-.sys-tag{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:11px 18px;font-size:14px;font-weight:500;color:#e6e1f2;}
-/* footer */
-footer{background:var(--ink);color:#fff;padding:54px 0;text-align:center;}
-.foot-brand{display:inline-flex;align-items:center;gap:10px;font-weight:900;font-size:19px;margin-bottom:12px;}
-.foot-brand .mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--lav),var(--lav-deep));display:flex;align-items:center;justify-content:center;font-size:18px;}
-.foot-desc{font-size:14.5px;color:#b8b2cc;margin-bottom:22px;}
-.foot-links{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-bottom:26px;}
-.foot-links a{font-size:14px;color:#c9c2dd;transition:color .2s;}
-.foot-links a:hover{color:#fff;}
-.foot-copy{font-size:12.5px;color:#7d7798;border-top:1px solid rgba(255,255,255,.1);padding-top:22px;}
-@media(max-width:880px){
-  .contact-grid{grid-template-columns:1fr;}
-  .portal-grid{grid-template-columns:1fr;gap:36px;}
-  .portal-art{order:-1;}
+  .menu-btn{display:flex;}
+  .grid2,.grid3,.courses,.next-l{grid-template-columns:minmax(0,1fr);}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+  .ga img{height:210px;}
+  .note,.cal{padding:24px 22px;}
+  .sechead{margin-bottom:32px;}
+  .step{flex-direction:column;gap:12px;padding:24px 24px;}
+  .next,.flow{padding:28px 24px;}
+  .fs{padding:0;flex:1 1 100%;margin-bottom:16px;}
+  .fs+.fs{border-left:none;border-top:1px solid var(--ink-3);padding-top:16px;}
+  .rv-hero{padding:26px 24px;}
+  .rv-hero p{font-size:18px;}
+  .rv-hero .badge{border-left:none;border-top:1px solid var(--line-d);padding-left:0;padding-top:18px;flex:1 1 100%;}
+  .ft{justify-content:center;text-align:center;}
 }
 </style>
 </head>
 <body>
 
-<!-- ===== 헤더 ===== -->
 <header>
   <div class="wrap nav">
-    <a href="#top" class="logo"><span class="mark">𝑓</span> 김병진 수학연구소</a>
+    <a class="brand" href="#top">
+      <span class="mark">𝑓</span>
+      <span class="brand-t"><b>김병진 수학연구소</b><span>KIMBJ MATH LAB</span></span>
+    </a>
     <nav class="nav-links">
       <a href="#about">강사 소개</a>
-      <a href="#strength">강점</a>
+      <a href="#assets">자체 자료</a>
       <a href="#course">수업 안내</a>
+      <a href="#system">관리 시스템</a>
+      <a href="#reports">손풀이</a>
       <a href="#reviews">후기</a>
-      <a href="#reports">분석서</a>
-      <a href="#contact" class="nav-cta">수업 문의</a>
+      <a class="nav-cta" href="#contact">수업 문의</a>
     </nav>
-    <button class="menu-btn" onclick="document.getElementById('mnav').classList.toggle('open')">☰</button>
+    <button class="menu-btn" type="button" aria-label="메뉴 열기" aria-expanded="false" onclick="toggleMenu(this)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
-  <div id="mnav" class="mobile-nav">
-    <a href="#about">강사 소개</a>
-    <a href="#strength">강점</a>
-    <a href="#course">수업 안내</a>
-    <a href="#reviews">후기</a>
-    <a href="#reports">분석서</a>
-    <a href="#contact">수업 문의</a>
+  <div class="drawer" id="drawer">
+    <a href="#about" onclick="closeMenu()">강사 소개</a>
+    <a href="#assets" onclick="closeMenu()">자체 자료</a>
+    <a href="#course" onclick="closeMenu()">수업 안내</a>
+    <a href="#system" onclick="closeMenu()">관리 시스템</a>
+    <a href="#reports" onclick="closeMenu()">손풀이</a>
+    <a href="#reviews" onclick="closeMenu()">후기</a>
+    <a href="#contact" onclick="closeMenu()">수업 문의</a>
   </div>
 </header>
 
-<!-- ===== 히어로 ===== -->
 <section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <h1>개념을 <span class="hl">이해</span>하면<br>문제는 <span class="hl">쉬워</span>집니다</h1>
-      <p class="lead">20년 경력의 고등부 전문 강사. 수학의 본질을 꿰뚫는 개념 설명과 유형별 전략으로 실력을 쌓아 드립니다.</p>
-      <div class="hero-tags">
-        <span class="tag">고등부 전문 · <b>20년+ 경력</b></span>
-        <span class="tag">포커스 수학연구팀</span>
-        <span class="tag"><b>2022 개정</b> 완벽 대비</span>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-l">
+        <div class="rule"><i></i><span class="eyebrow">고등부 전문 · 20년</span></div>
+        <h1>암기가 아니라,</h1>
+        <h1 class="b">그래서 푸는 힘.</h1>
+        <p>20년 동안 고등부 수학만 가르쳤습니다. 개념의 본질을 끝까지 파고들고, 유형별 전략을 체계로 세웁니다. 그 20년이 <b>교재와 해설, 기출 분석과 관리 시스템</b>으로 남아 있습니다.</p>
+        <div class="btns">
+          <a class="btn btn-l" href="#contact">수업 문의하기</a>
+          <a class="btn btn-o" href="#assets">자체 자료 보기</a>
+        </div>
       </div>
-      <div class="hero-btns">
-        <a href="#contact" class="btn btn-primary">수업 문의하기 →</a>
-        <a href="#about" class="btn btn-ghost">강사 소개 보기</a>
+      <div class="hero-r">
+        <div class="card-d"><div class="k">OWN TEXTBOOKS</div><div class="t">자체 교재 <span class="brass">7종</span></div><div class="d">Only one · All in one — 공통수학1·2, 대수, 미적분Ⅰ, 확률과 통계</div></div>
+        <div class="card-d"><div class="k">SOLUTION CARDS</div><div class="t">문항별 해설 <span class="brass">1,200장+</span></div><div class="d">핵심원리 → 단계 풀이 → 왜? → 검산까지 한 장에</div></div>
+        <div class="card-d"><div class="k">EXAM ANALYSIS</div><div class="t">학교별 기출 분석 <span class="brass">15개교+</span></div><div class="d">대구 지역 고등학교 내신을 문항 단위로 해부합니다</div></div>
       </div>
     </div>
-    <div class="hero-art">
-      <span class="glow"></span>
-      <img src="og-image.png" alt="김병진 수학연구소 캐릭터" onerror="this.src='rabbit.png'">
-      <div class="float-badge fb-1"><span class="ic" style="background:var(--lav-soft);">📚</span><span><span class="t1">강의 경력</span><span class="t2">20년+</span></span></div>
-      <div class="float-badge fb-2"><span class="ic" style="background:rgba(244,196,216,.4);">🏫</span><span><span class="t1">학교별 기출 분석</span><span class="t2">15개교+</span></span></div>
+    <div class="stats">
+      <div class="stat"><div class="n">20<small>년+</small></div><div class="l">고등부 강의 경력</div></div>
+      <div class="stat"><div class="n">2,731<small>문항</small></div><div class="l">자동채점 등록 문항</div></div>
+      <div class="stat"><div class="n">33<small>주차</small></div><div class="l">심화반 미니모의고사</div></div>
+      <div class="stat"><div class="n">2022<small>개정</small></div><div class="l">전 과정 대비</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== 강사 소개 ===== -->
-<section class="sec" id="about" style="background:var(--white);">
+<section class="sec" id="about">
   <div class="wrap">
-    <div class="about-grid">
+    <div class="sechead">
       <div>
-        <div class="eyebrow">About</div>
-        <h2 class="sec-title">수학은 암기가 아닌<br><span style="color:var(--lav-deep);">이해의 학문</span>입니다</h2>
-        <p style="font-size:16.5px;color:var(--ink-soft);margin-bottom:20px;">"암기가 아닌, 그래서 푸는 실력을 키우자." 20년간 수업에서 변함없이 강조해온 말입니다.</p>
-        <p style="font-size:16.5px;color:var(--ink-soft);margin-bottom:20px;">20년 동안 오직 고등부 수학만 가르쳐 왔습니다. 개념의 본질을 깊고 명확하게 전달하고, 문제 풀이 전략을 유형별로 체계화하는 것이 강의의 핵심입니다.</p>
-        <p style="font-size:16.5px;color:var(--ink-soft);">현재 40여 명의 강사분들과 <b style="color:var(--ink);">포커스 수학연구팀</b>을 운영하며 학교별 기출을 직접 분석·제작·배포하고 있습니다. 2022 개정 교육과정 전환기에도 완벽히 대비한 자료 시스템을 갖추고 있습니다.</p>
+        <div class="rule"><i></i><span class="eyebrow">ABOUT</span></div>
+        <h2 class="h2">수학은 암기가 아니라<br><span class="teal">이해의 학문</span>입니다</h2>
       </div>
-      <div class="about-stats">
-        <div class="stat-card"><div class="stat-num">20<span>년+</span></div><div class="stat-label">강의 경력</div></div>
-        <div class="stat-card"><div class="stat-num">40<span>여 명</span></div><div class="stat-label">포커스 수학연구팀 강사</div></div>
-        <div class="stat-card"><div class="stat-num">15<span>개교+</span></div><div class="stat-label">학교별 기출 분석</div></div>
-        <div class="stat-card accent"><div class="stat-num">2022</div><div class="stat-label">개정 교육과정 완벽 대비</div></div>
-      </div>
+      <p class="lead">20년간 수업에서 변함없이 강조해 온 한 문장입니다. 학생이 스스로 이해하게 만드는 설명, 처음 보는 문제도 접근할 수 있게 하는 전략 — 이 두 축이 만나야 성적이 움직입니다.</p>
     </div>
-  </div>
-</section>
-
-<!-- ===== 강점 ===== -->
-<section class="sec" id="strength">
-  <div class="wrap">
-    <div style="text-align:center;margin-bottom:54px;">
-      <div class="eyebrow">Strength</div>
-      <h2 class="sec-title">개념 × 전략 × 실력</h2>
-      <p class="sec-sub" style="margin:0 auto;">탄탄한 개념 이해와 체계적인 문제풀이 전략, 이 두 축이 시너지를 이룰 때 성적은 오릅니다.</p>
-    </div>
-    <div class="card-grid">
-      <div class="feature-card">
-        <div class="fic">💡</div>
-        <h3>개념 설명</h3>
-        <p>어떤 개념이든 쉽게, 학생이 스스로 이해하게 만드는 설명. 본질을 꿰뚫어 오래 남습니다.</p>
+    <div class="about">
+      <div class="profile">
+        <div>
+          <div class="mk">𝑓</div>
+          <div class="nm">김병진</div>
+          <div class="sub">김병진 수학연구소 · 고등부 수학<br>대구 수성구</div>
+        </div>
+        <div class="facts">
+          <div class="fact"><b>전공</b><span>고등부 수학 전 과정</span></div>
+          <div class="fact"><b>경력</b><span>고등부 전문 20년+</span></div>
+          <div class="fact"><b>교재</b><span>Only one · All in one 직접 집필</span></div>
+          <div class="fact"><b>연구</b><span>학교별 기출 분석 · 문항 DB 구축</span></div>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="fic">🎯</div>
-        <h3>문제풀이 전략</h3>
-        <p>유형별 전략을 체계화해, 처음 보는 문제도 전략적으로 접근하도록 훈련합니다.</p>
-      </div>
-      <div class="feature-card">
-        <div class="fic">📊</div>
-        <h3>기출 분석 전문</h3>
-        <p>15개교 이상의 학교별 기출 패턴을 직접 분석. 학교 맞춤 대비가 가능합니다.</p>
-      </div>
-      <div class="feature-card">
-        <div class="fic">🤖</div>
-        <h3>AI 활용 자료 제작</h3>
-        <p>Claude AI를 활용해 더 빠르고 정확한 분석서를 제작·배포합니다.</p>
+      <div class="steps">
+        <div class="step"><div class="no">01</div><div><h3>개념을 끝까지 파고듭니다</h3><p>공식을 외우게 하는 대신 왜 그렇게 되는지를 세웁니다. 학생이 직접 공식을 유도해 문제를 풀 수 있을 때까지가 한 개념의 끝입니다.</p></div></div>
+        <div class="step"><div class="no">02</div><div><h3>유형을 전략으로 세웁니다</h3><p>문항마다 사고방식을 이름 붙여 분류합니다. 경계값 확인, 경우 나누기, 그래프 개형 — 처음 보는 문제도 어느 서랍에서 꺼낼지 알게 됩니다.</p></div></div>
+        <div class="step"><div class="no">03</div><div><h3>학교 시험지를 직접 해부합니다</h3><p>대구 지역 고등학교 기출을 문항 단위로 검산하고 분석서로 냅니다. 원본의 정답 오류까지 찾아내 바로잡습니다.</p></div></div>
+        <div class="band">
+          <p>모든 자료는 <b>직접 만들고 직접 검산합니다.</b> 남의 해설을 옮겨 쓰지 않습니다.</p>
+          <a href="#assets">자료 보러 가기</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 수업 안내 ===== -->
-<section class="sec" id="course" style="background:var(--white);">
+<section class="sec alt" id="assets">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:54px;">
-      <div class="eyebrow">Course</div>
-      <h2 class="sec-title">기반 수업 과정</h2>
-      <p class="sec-sub" style="margin:0 auto;">공통수학1·2부터 대수·미적분Ⅰ까지, 2022 개정 교육과정의 모든 과정을 완벽하게 커버합니다.</p>
-    </div>
-    <div class="course-grid">
-      <div class="course-card"><span class="badge common">공통 · 공통과목</span><h3>공통수학 1</h3><p>다항식 · 방정식 · 부등식 · 경우의 수 · 행렬</p></div>
-      <div class="course-card"><span class="badge common">공통 · 공통과목</span><h3>공통수학 2</h3><p>도형의 방정식 · 집합과 명제 · 함수와 그래프</p></div>
-      <div class="course-card"><span class="badge general">일반선택</span><h3>대수</h3><p>지수·로그 · 삼각함수 · 수열 (구 수학Ⅰ)</p></div>
-      <div class="course-card"><span class="badge general">일반선택</span><h3>미적분Ⅰ</h3><p>극한 · 미분 · 적분 (구 수학Ⅱ)</p></div>
-      <div class="course-card"><span class="badge general">일반선택</span><h3>확률과 통계</h3><p>순열·조합 · 확률 · 통계 · 모비율</p></div>
-      <div class="course-card"><span class="badge career">진로선택</span><h3>미적분Ⅱ</h3><p>급수 · 여러 가지 미분·적분법 (구 미적분)</p></div>
-      <div class="course-card"><span class="badge career">진로선택</span><h3>기하</h3><p>이차곡선 · 평면·공간벡터</p></div>
-      <div class="course-card focus"><span class="badge focusb">포커스 수학연구팀</span><h3>기출 분석 자료</h3><p>학교별 기출 분석 · AI 자료 제작 · 배포</p></div>
-    </div>
-
-    <div class="timetable">
-      <div class="tt-head">
-        <h3>주간 시간표</h3>
-        <span class="tt-note">※ 개별 상담 후 반 배정</span>
+    <div class="sechead">
+      <div>
+        <div class="rule"><i></i><span class="eyebrow">OWN MATERIALS</span></div>
+        <h2 class="h2">20년이 남긴 것</h2>
       </div>
-      <div class="tt-scroll">
-        <table>
-          <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th><th>일</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="t">09:00~11:00</td>
-              <td></td><td></td><td></td><td></td><td></td>
-              <td class="c-lav">개별반</td>
-              <td class="c-gray">개별반</td>
-            </tr>
-            <tr>
-              <td class="t">11:00~13:00</td>
-              <td></td><td></td><td></td><td></td><td></td>
-              <td class="c-blue">공수1 심화반<span>중3</span></td>
-              <td class="c-green">공통수학2 심화반<span>고1</span></td>
-            </tr>
-            <tr>
-              <td class="t">14:30~16:20</td>
-              <td></td><td class="c-blue">공수1 문풀반<span>초6</span></td><td></td><td></td><td class="c-blue">공수1 문풀반<span>초6</span></td><td></td><td></td>
-            </tr>
-            <tr>
-              <td class="t">16:20~18:10</td>
-              <td></td><td class="c-blue">공수2 개념반<span>중2</span></td><td></td><td></td><td class="c-blue">공수2 개념반<span>중2</span></td><td></td><td></td>
-            </tr>
-            <tr>
-              <td class="t">18:10~20:00</td>
-              <td class="c-green">미적분1 개념반<span>중2</span></td>
-              <td class="c-gold">대수 문풀반<span>중2</span></td>
-              <td></td>
-              <td class="c-green">미적분1 개념반<span>중2</span></td>
-              <td class="c-gold">대수 문풀반<span>중2</span></td>
-              <td></td><td></td>
-            </tr>
-            <tr>
-              <td class="t">20:00~22:00</td>
-              <td class="c-green">고등 내신대비반<span>고1·2</span></td>
-              <td class="c-blue">공수1 심화반<span>고1</span></td>
-              <td></td>
-              <td class="c-green">고등 내신대비반<span>고1·2</span></td>
-              <td class="c-blue">공수1 심화반<span>고1</span></td>
-              <td></td><td></td>
-            </tr>
-          </tbody>
-        </table>
+      <p class="lead">교재, 해설, 기출 분석, 문항 데이터베이스. 수업에서 쓰는 모든 자료를 직접 만들고 매년 다시 씁니다.</p>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="rowhead"><h3>자체 교재</h3><div class="big">7<small>종</small></div></div>
+        <p><b>Only one</b> — 개념을 입체로 보게 하는 본교재<br><b>All in one</b> — 유형을 전략으로 세우는 준심화</p>
+        <div class="tags"><span class="tag">공통수학1</span><span class="tag">공통수학2</span><span class="tag">대수</span><span class="tag">미적분Ⅰ</span><span class="tag">확률과 통계</span></div>
+      </div>
+      <div class="card">
+        <div class="rowhead"><h3>문항별 해설카드</h3><div class="big">1,200<small>장+</small></div></div>
+        <p>한 문항에 한 장. 핵심원리 상자로 시작해 번호 붙은 단계 풀이, 흔한 실수, 되는 경우와 안 되는 경우, 그리고 검산까지 넣습니다.</p>
+        <div class="quote">계산을 한 줄도 건너뛰지 않습니다. 중위권 학생이 혼자 읽고 이해할 수 있는 것이 기준입니다.</div>
+      </div>
+      <div class="card">
+        <div class="rowhead"><h3>미니모의고사 · 월간지</h3><div class="big">33<small>주차</small></div></div>
+        <p>심화반 주간 미니모의고사를 33주차까지 냈습니다. 고난도 문항은 원본과 변형을 나란히 실은 월간지로 다시 묶습니다.</p>
+        <div class="tags"><span class="tag">공수1 심화반</span><span class="tag">공수2 심화반</span><span class="tag">변형 문항</span></div>
+      </div>
+      <div class="card">
+        <div class="rowhead"><h3>문항 데이터베이스</h3><div class="big">2,731<small>문항</small></div></div>
+        <p>교재 문항마다 정답과 유형을 붙여 두었습니다. 학생이 숙제를 제출하면 자동으로 채점되고, 틀린 문항이 유형별로 모입니다.</p>
+        <div class="quote">"도형의 방정식은 아는데 경계값 확인에서 계속 틀린다" — 여기까지 나와야 처방이 됩니다.</div>
+      </div>
+    </div>
+    <div class="next">
+      <div class="next-h"><span class="eyebrow">NEXT</span><h3>앞으로 만들 것들</h3></div>
+      <div class="next-l">
+        <div class="nx"><i></i><div><b>2022 개정 전 과정 교재 완간</b>남은 과정을 순서대로 채웁니다</div></div>
+        <div class="nx"><i></i><div><b>해설카드 전 단원 확대</b>모든 교재 문항에 한 장씩</div></div>
+        <div class="nx"><i></i><div><b>대구 학사일정판 공개</b>학교별 시험 범위와 시간표를 한 자리에</div></div>
+        <div class="nx"><i></i><div><b>맞춤 학습지 자동 제작</b>학생이 틀린 유형으로 다음 학습지를</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 학생 후기 ===== -->
-<section class="sec" id="reviews">
+<section class="sec" id="course">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:50px;">
-      <div class="eyebrow">Reviews</div>
-      <h2 class="sec-title">학생 · 학부모 후기</h2>
-      <p class="sec-sub" style="margin:0 auto;">실제 수업을 경험한 학생들의 이야기입니다.</p>
+    <div class="sechead">
+      <div>
+        <div class="rule"><i></i><span class="eyebrow">COURSE</span></div>
+        <h2 class="h2">수업 과정</h2>
+      </div>
+      <p class="lead">공통수학1·2부터 미적분Ⅱ·기하까지, 2022 개정 교육과정의 모든 과정을 다룹니다.</p>
     </div>
-    <div class="review-grid">
-      <div class="review-card"><div class="stars">★★★★★</div><p>"개념의 응용까지 심화된 응용까지 배울 수 있고, 자료가 많아 부족한 부분을 채울 수 있었다."</p><span class="rv">학생 · 2026년</span></div>
-      <div class="review-card"><div class="stars">★★★★★</div><p>"선생님의 only one 교재가 미적분을 입체적으로 보이게 만들어 주었고, 알려주신 스킬을 배우면서 실제 시험에서 다른 학생들보다 자유롭게 시간을 컨트롤할 수 있었습니다. 이번 수학 시험에서 영륜고 전교 1등을 받았습니다."</p><span class="rv">학생 · 2026년</span></div>
-      <div class="review-card"><div class="stars">★★★★★</div><p>"1등급들이 아는 공식들을 많이 알게 되었고, 그래서 대륜고에서 1등급을 받을 수 있게 되었다."</p><span class="rv">학생 · 2026년</span></div>
-      <div class="review-card"><div class="stars">★★★★★</div><p>"원래 수학을 자신없어 하는 스포츠 학생이었으나 김병진 선생님의 수업을 듣고 수학에 자신감을 느끼게 되고 주변에서 수학을 잘한다는 소리를 듣게 되었습니다. 이 수업을 적극 추천드립니다."</p><span class="rv">학생 · 2026년</span></div>
-      <div class="review-card"><div class="stars">★★★★★</div><p>"단순히 계산식으로 문제를 푸는 것보다 그래프를 통해 시각적으로 문제를 이해하는 것이 쉬웠습니다. 공식을 외우는 것 이상으로 이해시켜 주셔서 직접 공식을 유도해 문제를 풀 수 있게 되었습니다."</p><span class="rv">학생 · 2026년</span></div>
-      <div class="review-card"><div class="stars">★★★★★</div><p>"여러 유형의 변형 문제까지 다뤄볼 수 있었고, 또한 이해하기 어려운 문제도 풀 수 있게 되었다."</p><span class="rv">학생 · 2026년</span></div>
-      <div class="review-card"><div class="stars">★★★★★</div><p>"한눈에 보기 쉬운 예쁜 그래프, 뭉친 것을 풀어주는 서비스, 다양한 해설."</p><span class="rv">학생 · 2026년</span></div>
-      <div class="review-card"><div class="stars">★★★★★</div><p>"기본기를 탄탄하게 잡아 시험 초반 문제를 잘 해결할 수 있었고, 심화문제도 여러 유형을 이해하며 풀어나가 좋았다."</p><span class="rv">학생 · 2026년</span></div>
+    <div class="courses">
+      <div class="co"><div class="cat">공통과목</div><h3>공통수학 1</h3><p>다항식 · 방정식 · 부등식 · 경우의 수 · 행렬</p></div>
+      <div class="co"><div class="cat">공통과목</div><h3>공통수학 2</h3><p>도형의 방정식 · 집합과 명제 · 함수와 그래프</p></div>
+      <div class="co"><div class="cat">일반선택</div><h3>대수</h3><p>지수·로그 · 삼각함수 · 수열</p></div>
+      <div class="co"><div class="cat">일반선택</div><h3>미적분Ⅰ</h3><p>극한 · 미분 · 적분</p></div>
+      <div class="co"><div class="cat">일반선택</div><h3>확률과 통계</h3><p>순열·조합 · 확률 · 통계 · 모비율</p></div>
+      <div class="co"><div class="cat">진로선택</div><h3>미적분Ⅱ</h3><p>급수 · 여러 가지 미분·적분법</p></div>
+      <div class="co"><div class="cat">진로선택</div><h3>기하</h3><p>이차곡선 · 평면·공간벡터</p></div>
+      <div class="co"><div class="cat">연구</div><h3>기출 분석 자료</h3><p>학교별 기출 분석 · 자료 제작 · 배포</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== 분석서 ===== -->
-<section class="sec" id="reports" style="background:var(--white);">
+<section class="sec alt" id="system">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:50px;">
-      <div class="eyebrow">Reports</div>
-      <h2 class="sec-title">직접 제작한 기출 분석서</h2>
-      <p class="sec-sub" style="margin:0 auto;">포커스 수학연구팀이 직접 분석·제작한 학교별 기출 분석 자료입니다.</p>
+    <div class="sechead">
+      <div>
+        <div class="rule"><i></i><span class="eyebrow">SYSTEM</span></div>
+        <h2 class="h2">숙제 한 장까지<br><span class="teal">남습니다</span></h2>
+      </div>
+      <p class="lead">출결·숙제·시험·진도를 자체 개발한 시스템으로 관리합니다. 학생은 앱에서 숙제를 내고 바로 채점받고, 학부모는 한 달 현황을 링크 하나로 봅니다.</p>
     </div>
-    <div class="report-grid">
-      <a class="report-card" href="2025_경북고_분석서_디자인.pdf" target="_blank" rel="noopener">
-        <div class="rc-top"><span class="rc-school">경북고등학교</span><span class="rc-tag">공통수학1</span></div>
-        <h3>2025 1학년 1학기<br>기말고사 분석서</h3>
-        <p>케일리-해밀턴 · 복소평면 · 복이차식 · 근의 분리 등 8개 문항 완전 해설.</p>
-        <span class="rc-link">PDF 보기 →</span>
+    <div class="grid3">
+      <div class="card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E7A63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>강사 대시보드</h3>
+        <div class="ul"><div>· 출결·숙제·테스트·진도 기록</div><div>· 오답 유형 분석과 약점 집계</div><div>· 학교 기출 배점표 자동 환산</div><div>· 월간 리포트 발행</div></div>
+      </div>
+      <div class="card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E7A63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></div>
+        <h3>학생 클래스룸</h3>
+        <div class="ul"><div>· 숙제 답 입력 → 즉시 자동채점</div><div>· 제출하면 문항별 해설 열람</div><div>· 틀린 번호가 유형으로 모임</div><div>· 교재 정답 오류까지 알려 줌</div></div>
+      </div>
+      <div class="card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E7A63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <h3>학부모 포털</h3>
+        <div class="ul"><div>· 이번 달 출결과 숙제 현황</div><div>· 테스트 점수 흐름</div><div>· 보강 신청</div><div>· 접속코드로 안전하게</div></div>
+      </div>
+    </div>
+    <div class="flow">
+      <div class="flow-h"><span class="eyebrow">WHY IT MATTERS</span><h3>틀린 문제가<br>그냥 지나가지 않습니다</h3></div>
+      <div class="flow-s">
+        <div class="fs"><b>01 제출</b><span>학생이 앱에 답을 입력합니다</span></div>
+        <div class="fs"><b>02 채점</b><span>정답표가 즉시 맞춰 봅니다</span></div>
+        <div class="fs"><b>03 유형</b><span>틀린 번호가 약점으로 묶입니다</span></div>
+        <div class="fs"><b>04 처방</b><span>다음 수업에서 그 자리를 다시 팝니다</span></div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--mute);text-align:center;margin-top:22px;">재원생은 강사에게 접속 링크를 받아 이용하실 수 있습니다.</p>
+  </div>
+</section>
+
+<section class="sec" id="reports">
+  <div class="wrap">
+    <div class="sechead">
+      <div>
+        <div class="rule"><i></i><span class="eyebrow">HANDWRITTEN SOLUTIONS</span></div>
+        <h2 class="h2">손으로 푼 것을<br>그대로 보여 드립니다</h2>
+      </div>
+      <p class="lead">대구 지역 고등학교 기출을 전 문항 직접 풉니다. 아래는 실제 내신 기출 분석에서 옮겨 온 손풀이의 일부입니다. 원본 시험지의 정답 오류를 찾아낸 것도 여러 건입니다.</p>
+    </div>
+    <div class="gal">
+      <a class="ga" href="img/hand-01.jpg" target="_blank" rel="noopener">
+        <img src="img/hand-01.jpg" alt="경북고 공통수학2 중간고사 손풀이 일부 — 원과 직선, 대칭이동">
+        <div class="cap"><b>경북고등학교</b><span>공통수학2 · 2025 2학기 중간</span></div>
       </a>
-      <a class="report-card" href="2025_경북고_미적분1_기말_분석서_포커스수학연구팀_수정.pdf" target="_blank" rel="noopener">
-        <div class="rc-top"><span class="rc-school">경북고등학교</span><span class="rc-tag">미적분Ⅰ</span></div>
-        <h3>2025 2학년 1학기<br>미적분 기말고사 분석서</h3>
-        <p>이차함수 넓이 · 두 이차함수에 접하는 접선 · 사차함수 미분가능성 등 완전 해설.</p>
-        <span class="rc-link">PDF 보기 →</span>
+      <a class="ga" href="img/hand-02.jpg" target="_blank" rel="noopener">
+        <img src="img/hand-02.jpg" alt="남산고 공통수학2 중간고사 손풀이 일부 — 내분점과 좌표">
+        <div class="cap"><b>남산고등학교</b><span>공통수학2 · 2025 2학기 중간</span></div>
       </a>
-      <a class="report-card" href="2025_경신고_1-1기말_분석서_포커스수학연구팀_수정.pdf" target="_blank" rel="noopener">
-        <div class="rc-top"><span class="rc-school">경신고등학교</span><span class="rc-tag">공통수학1</span></div>
-        <h3>2025 1학년 1학기<br>기말고사 분석서</h3>
-        <p>다항식의 곱 나머지 · 절댓값 부등식 · 부등식 자연수 해 · 이차함수 조건 등 완전 해설.</p>
-        <span class="rc-link">PDF 보기 →</span>
+      <a class="ga" href="img/hand-03.jpg" target="_blank" rel="noopener">
+        <img src="img/hand-03.jpg" alt="능인고 공통수학2 중간고사 손풀이 일부 — 원 밖의 점에서 그은 두 접선">
+        <div class="cap"><b>능인고등학교</b><span>공통수학2 · 2025 2학기 중간</span></div>
       </a>
-      <a class="report-card" href="2025_경신고_미적분1_기말_분석서_포커스수학연구팀.pdf" target="_blank" rel="noopener">
-        <div class="rc-top"><span class="rc-school">경신고등학교</span><span class="rc-tag">미적분Ⅰ</span></div>
-        <h3>2025 2학년 1학기<br>미적분 기말고사 분석서</h3>
-        <p>이차함수 넓이 풀이 · 사차함수 미분가능성 등 완전 해설.</p>
-        <span class="rc-link">PDF 보기 →</span>
+      <a class="ga" href="img/hand-04.jpg" target="_blank" rel="noopener">
+        <img src="img/hand-04.jpg" alt="시지고 공통수학2 중간고사 손풀이 일부 — 원에 접하는 직선">
+        <div class="cap"><b>시지고등학교</b><span>공통수학2 · 2025 2학기 중간</span></div>
       </a>
     </div>
+    <div class="note">
+      <p>한 문항도 건너뛰지 않습니다. <b>풀이 과정, 그래프, 정답까지 손으로 적어</b> 학생이 어디서 갈렸는지 짚어 드립니다. 이미지를 누르면 크게 볼 수 있습니다.</p>
+      <a class="btn btn-l" href="https://blog.naver.com/tongky0777" target="_blank" rel="noopener" style="white-space:nowrap;">분석 글 더 보기 →</a>
+    </div>
+    <div class="cal">
+      <div class="t">
+        <span class="eyebrow">OPEN</span>
+        <h3>대구 학사일정 찾기</h3>
+        <p>대구·경북 초·중·고 <b>491개교</b>의 방학·개학·정기시험 일정과 교과서·부교재를 학교 이름으로 찾는 페이지입니다.</p>
+        <p style="margin-top:9px;font-size:13.5px;opacity:.88;">처음 오시면 <b>이름과 비밀번호 네 자리</b>로 가입을 신청해 주세요. 승인해 드리면 바로 보실 수 있습니다.</p>
+      </div>
+      <a href="https://daegu-school-calendar.vercel.app" target="_blank" rel="noopener">학사일정 보러 가기 →</a>
+    </div>
   </div>
 </section>
 
-<!-- ===== 공지 & 문의 ===== -->
-<section class="sec" id="contact">
+<section class="sec dark" id="reviews">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:50px;">
-      <div class="eyebrow">Contact</div>
-      <h2 class="sec-title">공지 &amp; 문의</h2>
-      <p class="sec-sub" style="margin:0 auto;">수업 문의는 빠른 시간 내에 답변 드립니다.</p>
+    <div class="sechead">
+      <div>
+        <div class="rule"><i></i><span class="eyebrow">REVIEWS</span></div>
+        <h2 class="h2">학생들이 쓴 말</h2>
+      </div>
+      <p class="lead">수업을 들은 학생들이 직접 남긴 후기입니다. 고쳐 쓰지 않고 그대로 옮겼습니다.</p>
     </div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="cic" style="background:var(--lav-soft);">📞</div>
-        <h3>전화 상담</h3>
-        <p class="cdesc">상담 가능 시간<br><b>매일 오전 9시 ~ 새벽 1시</b></p>
-        <a href="tel:01064865966" class="btn btn-primary" style="width:100%;justify-content:center;">📞 전화 바로 걸기</a>
+    <div class="rv-hero">
+      <div>
+        <p>"선생님의 Only one 교재가 미적분을 입체적으로 보이게 만들어 주었고, 알려주신 스킬을 배우면서 실제 시험에서 다른 학생들보다 자유롭게 시간을 컨트롤할 수 있었습니다."</p>
+        <div class="who">학생 · 2026년</div>
       </div>
-      <div class="contact-card">
-        <div class="cic" style="background:rgba(244,196,216,.4);">💬</div>
-        <h3>카카오톡 문의</h3>
-        <p class="cdesc">메시지를 남겨주시면<br><b>순서대로 답변 드립니다</b></p>
-        <a href="https://open.kakao.com/o/snnxXTwg" target="_blank" rel="noopener" class="btn btn-ghost kakao" style="width:100%;justify-content:center;">💬 카카오톡 바로 가기</a>
-      </div>
-      <div class="contact-card">
-        <div class="cic" style="background:#e8f3ee;">📝</div>
-        <h3>블로그</h3>
-        <p class="cdesc">수업 후기와 분석 자료를<br><b>블로그에서 만나보세요</b></p>
-        <a href="https://blog.naver.com/tongky0777" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%;justify-content:center;">📝 블로그 보러가기</a>
-      </div>
+      <div class="badge"><b>전교 1등</b><span>영륜고 · 수학<br>2026년 시험</span></div>
+    </div>
+    <div class="grid3">
+      <div class="rv"><p>"1등급들이 아는 공식들을 많이 알게 되었고, 그래서 대륜고에서 1등급을 받을 수 있게 되었다."</p><div class="who">학생 · 2026년</div></div>
+      <div class="rv"><p>"단순히 계산식으로 문제를 푸는 것보다 그래프를 통해 시각적으로 문제를 이해하는 것이 쉬웠습니다. 공식을 외우는 것 이상으로 이해시켜 주셔서 직접 공식을 유도해 문제를 풀 수 있게 되었습니다."</p><div class="who">학생 · 2026년</div></div>
+      <div class="rv"><p>"원래 수학을 자신없어 하는 스포츠 학생이었으나 김병진 선생님의 수업을 듣고 수학에 자신감을 느끼게 되고 주변에서 수학을 잘한다는 소리를 듣게 되었습니다."</p><div class="who">학생 · 2026년</div></div>
+      <div class="rv"><p>"개념의 응용까지 심화된 응용까지 배울 수 있고, 자료가 많아 부족한 부분을 채울 수 있었다."</p><div class="who">학생 · 2026년</div></div>
+      <div class="rv"><p>"기본기를 탄탄하게 잡아 시험 초반 문제를 잘 해결할 수 있었고, 심화문제도 여러 유형을 이해하며 풀어나가 좋았다."</p><div class="who">학생 · 2026년</div></div>
+      <div class="rv"><p>"여러 유형의 변형 문제까지 다뤄볼 수 있었고, 또한 이해하기 어려운 문제도 풀 수 있게 되었다."</p><div class="who">학생 · 2026년</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== 관리 시스템 ===== -->
-<section class="sec" style="background:linear-gradient(135deg,#3a2f5c,#2b2540);color:#fff;">
-  <div class="wrap portal-grid">
-    <div>
-      <div class="eyebrow" style="color:var(--lav);">System</div>
-      <h2 class="sec-title" style="color:#fff;">대시보드와 클래스룸으로<br>빈틈없는 관리</h2>
-      <p style="font-size:16px;color:#c9c2dd;margin-bottom:28px;max-width:460px;">출결·성적·진도·숙제까지, 자체 개발한 관리 시스템으로 학생 한 명 한 명을 꼼꼼하게 챙깁니다.</p>
-      <ul class="portal-list">
-        <li><span>✓</span> 출결 기록 실시간 관리</li>
-        <li><span>✓</span> 테스트 점수 추적 및 강사 피드백</li>
-        <li><span>✓</span> 현재 진도 및 숙제 현황 체계 관리</li>
-      </ul>
-      <div class="sys-tags">
-        <span class="sys-tag">📊 대시보드</span>
-        <span class="sys-tag">🎓 클래스룸</span>
+<section class="sec alt" id="contact">
+  <div class="wrap">
+    <div class="sechead">
+      <div>
+        <div class="rule"><i></i><span class="eyebrow">CONTACT</span></div>
+        <h2 class="h2">수업 문의</h2>
       </div>
-      <p style="font-size:13px;color:#9a93b5;margin-top:18px;">※ 재원생은 강사에게 접속 링크를 받아 이용하실 수 있습니다.</p>
+      <p class="lead">상담 후 학생의 현재 상태에 맞춰 반을 배정합니다. 편한 방법으로 연락 주세요.</p>
     </div>
-    <div class="portal-art">
-      <div class="glow" style="position:absolute;width:90%;height:90%;border-radius:50%;background:radial-gradient(circle,rgba(184,164,224,.32),transparent 65%);"></div>
-      <img src="og-image.png" alt="캐릭터" style="position:relative;z-index:1;max-width:300px;border-radius:24px;filter:drop-shadow(0 20px 44px rgba(0,0,0,.34));">
+    <div class="grid3">
+      <a class="ct dark" href="tel:01064865966">
+        <div>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <h3>전화 상담</h3>
+          <div class="d">매일 오전 9시 ~ 새벽 1시</div>
+        </div>
+        <div><div class="tel">010-6486-5966</div><div class="go">전화 바로 걸기 →</div></div>
+      </a>
+      <a class="ct lite" href="https://open.kakao.com/o/snnxXTwg" target="_blank" rel="noopener">
+        <div>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E7A63" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <h3>카카오톡 문의</h3>
+          <div class="d">메시지를 남겨 주시면<br>순서대로 답변 드립니다</div>
+        </div>
+        <div class="go">오픈채팅 바로 가기 →</div>
+      </a>
+      <a class="ct lite" href="https://blog.naver.com/tongky0777" target="_blank" rel="noopener">
+        <div>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E7A63" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <h3>블로그</h3>
+          <div class="d">학교별 기출 분석과<br>수업 이야기를 씁니다</div>
+        </div>
+        <div class="go">블로그 보러 가기 →</div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ===== 푸터 ===== -->
 <footer>
-  <div class="wrap foot">
-    <div class="foot-brand"><span class="mark">𝑓</span> 김병진 수학연구소</div>
-    <p class="foot-desc">고등부 전문 수학 강사 · 포커스 수학연구팀</p>
-    <div class="foot-links">
-      <a href="#about">강사 소개</a><a href="#course">수업 안내</a><a href="#reports">분석서</a><a href="#contact">문의</a>
+  <div class="wrap ft">
+    <div class="ft-l">
+      <span class="mark">𝑓</span>
+      <div><b>김병진 수학연구소</b><span>고등부 전문 수학 · 대구 수성구</span></div>
     </div>
-    <p class="foot-copy">© 2025 김병진 수학연구소 · Powered by 포커스 수학연구팀</p>
+    <nav class="ft-n">
+      <a href="#about">강사 소개</a><a href="#assets">자체 자료</a><a href="#course">수업 안내</a><a href="#reports">손풀이</a><a href="#contact">문의</a>
+    </nav>
+    <div class="ft-c">© 2026 김병진 수학연구소</div>
   </div>
 </footer>
 
 <script>
-// 모바일 메뉴: 링크 클릭 시 닫기
-document.querySelectorAll('#mnav a').forEach(function(a){
-  a.addEventListener('click',function(){ document.getElementById('mnav').classList.remove('open'); });
-});
+function toggleMenu(btn){
+  var d=document.getElementById('drawer');
+  var on=d.classList.toggle('on');
+  btn.setAttribute('aria-expanded', on?'true':'false');
+  btn.setAttribute('aria-label', on?'메뉴 닫기':'메뉴 열기');
+}
+function closeMenu(){
+  var d=document.getElementById('drawer');
+  d.classList.remove('on');
+  var b=document.querySelector('.menu-btn');
+  if(b){ b.setAttribute('aria-expanded','false'); b.setAttribute('aria-label','메뉴 열기'); }
+}
 </script>
 </body>
 </html>
